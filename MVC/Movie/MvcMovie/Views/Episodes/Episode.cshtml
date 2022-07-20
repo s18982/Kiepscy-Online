@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = ViewData["Ep_Tit"];
+}
+<h1>Świat według Kiepskich - Odcinek @ViewData["Num"]</h1>
+<h2>@ViewData["Ep_Tit"]</h2>
+<p>
+    <li> @ViewData["Desc"]</li>
+    <li> @ViewData["Year"]</li>
+
+    @if (ViewData["Link"] == "Brak linku")
+    {
+        <li>Brak wideo</li>      
+    }
+    else { 
+        <li>Oglądaj <a href=@ViewData["Link"]>tutaj</a></li>
+    }  
+
+
+</p>
